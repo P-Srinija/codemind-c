@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int i,j,n,t,s,su,c,co,r,f,h,k;
+    scanf("%d",&n);
+    for(i=n;;i++)
+    {
+        su=0;
+        for(h=2;h<=i;h++)
+        {
+            if(i%h==0)
+            su=su+1;
+            }
+            if(su==1)
+            {
+             r=i;
+             break;
+        }
+    }
+    for(j=n;j>=2;j--)
+    {
+        co=0;
+        for(k=2;k<=j;k++)
+        {
+            if(j%k==0)
+            co=co+1;
+        }
+        if(co==1)
+        {
+           f=j;
+           break;
+        }
+    }
+    if(r-n<n-f)
+    printf("%d
+",r-n);
+    else if(r-n==n-f)
+    printf("%d
+",n-f);    
+    else 
+    {
+        printf("%d
+",n-f);
+    }
+}
